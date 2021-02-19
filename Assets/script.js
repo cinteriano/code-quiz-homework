@@ -96,10 +96,24 @@ function compare(event) {
 
         if(element.textContent == questions[questionIndex].answer){
             score++;
-            createDiv.textContent
+            createDiv.textContent = "Correct!";
 
+        } else{
+            secondsLeft = secondsLeft - penalty;
+            createDiv.textContent = "Wrong the answer is:" + questions[questionIndex].answer;
 
         }
+        questionIndex++;
+        
+        if(questionIndex >= questions.length){
+            allDone();
+            createDiv.textContent = "Done" + " " + "you got" + score + "/" + questions.length + "right";
+
+        } else {
+            render(questionIndex);
+
+        }
+        questionsDiv.appendChild(createDiv);
 
 
 
@@ -108,8 +122,81 @@ function compare(event) {
     }
 
 
+}
+
+function allDone() {
+    questionsDiv.innerHTML = "";
+    currentTime.innerHTML = "";
+
+    var createH1 = document.createElement("h1")
+    createH1.setAttribute("id" , "createP");
+
+    questionsDiv.appendChild(createP)
+
+    if (secondsLeft >= 0){
+        var timeRemaining = secondsLeft;
+        var createP2 = document.createElement("p");
+        clearInterval(holdInterval);
+        createP.textContent = "your final score is" + timeRemaining;
+        
+        questionsDiv.appendChild(createP2);
 
 
 
+    }
 
+    var createLabel = document.createElement("label");
+    createLabel.setAttribute("id" , "createLabel");
+    createLabel.textContent = "enter your initials:"
+
+    questionsDiv.appendChild(createLabel);
+
+    var createInput = document.createElement("input");
+    createInput.setAttribute("type", "text");
+    createInput.setAttribute("id", "initials");
+    createInput.textContent = "";
+
+    questionsDiv.appendChild(createInput);
+
+    var createSubmit = document.createElement("button")
+    createSubmit.setAttribute("type", "submit")
+    createSubmit.setAttribute("id" , "Submit")
+    createSubmit.textContent = "Submit";
+
+    questionsDiv.appendChild(createSubmit);
+
+    createSubmit.addEventListener("click" , function() {
+        var initials = createInput.value;
+
+        if (initials === null) {
+            
+            console.log("No value entered")
+        
+        }else {
+
+            var finalScore = {
+                initials: initials,
+                score: timeRemaining
+            }
+            console.log(finalScore);
+            var allScores = localStorage.getItem("allScores");
+            if (allScores === null) {
+                allScores = [];
+
+            } else {
+                allScores = JSON.parse(allScores);
+            }
+
+            allScores.push(finalScore);
+            var newScore = JSON.stringify(allScores);
+            localStorage.setItem("allScores" , newScore);
+            window.location.replace("./scores.html")
+
+
+        }
+
+
+    })
+    
+    
 }
