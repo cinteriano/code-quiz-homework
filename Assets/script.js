@@ -53,12 +53,10 @@ timer.addEventListener("click", function() {
                 clearInterval(holdInterval);
                 allDone();
                 currentTime.textContent = "Out of Time";
+            
             }
-
-
         },  1000);
 
-        
     }
     render(questionIndex)
 });
@@ -129,7 +127,13 @@ function allDone() {
     currentTime.innerHTML = "";
 
     var createH1 = document.createElement("h1")
-    createH1.setAttribute("id" , "createP");
+    createH1.setAttribute("id" , "createH1");
+    createH1.textContent = "All Done"
+
+    questionsDiv.appendChild(createH1);
+
+    var createP = document.createElement("p")
+    createP.setAttribute("id", "createP" )
 
     questionsDiv.appendChild(createP)
 
