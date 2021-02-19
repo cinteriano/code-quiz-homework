@@ -23,7 +23,7 @@
  
  #currentTime{
      float: right;
-     color: ;
+     color: yellow ;
      font-family: 'Press Start 2P', cursive;
  }
  
@@ -53,6 +53,10 @@
  
  button{
      border-radius: 8px;
+     color: tomato;
+     background-color: teal;
+     padding: 10px;
+     margin: 15px;
     
  }
  
@@ -128,8 +132,10 @@ body{
 }
 
 #initials{
-
- background-color: cyan;
+    margin: 30px;
+    background-color: #fe6f5e;
+    border-radius: 8px;
+        padding: 10px;
 
 }
 
@@ -142,15 +148,17 @@ body{
  a {
      display: flex;
     font-size: 35px;
-    color: tomato;
+    color: crimson ;
     font-family: 'Press Start 2P', cursive;
     text-align: end;
     justify-content: space-around;
-
+     
  }
 
  p{
- text-align: center;
+  text-align: center;
 
 
  }
+
+ 

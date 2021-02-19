@@ -1,29 +1,29 @@
 var questions = [
     {
-        title: "what year did pink floyd form?", 
-        choices: ["1965", "1970" , "1962" , "1971"],
-        answer: "1965"
+        title: "What year was Super Mario made?", 
+        choices: ["1983", "1979" , "1985" , "1990"],
+        answer: "1983"
 
     },
     
     {
-        title: "what year did pink floyd form?", 
-        choices: ["1965", "1970" , "1962" , "1971"],
-        answer: "1965"
+        title: "Which one is not the name of a ghost from Pac-Man?", 
+        choices: ["Inky ", "Clyde" , "Pinky" , "Bon"],
+        answer: "Bon"
 
     },
     
     {
-        title: "what year did pink floyd form?", 
-        choices: ["1965", "1970" , "1962" , "1971"],
-        answer: "1965"
+        title: "What got game of the year in 2016?", 
+        choices: ["The legend of zelda: Breath of the Wild" , "Super Mario Odyssey" , "Horizon Zero Dawn " , "PlayerUnknown’s Battlegrounds"],
+        answer: "The legend of zelda: Breath of the Wild"
 
     },
     
     {
-        title: "what year did pink floyd form?", 
-        choices: ["1965", "1970" , "1962" , "1971"],
-        answer: "1965"
+        title: "The year Tetris was created?", 
+        choices: ["1987", "1981" , "1984" , "1980"],
+        answer: "1984"
 
     },
         
@@ -38,7 +38,7 @@ var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questions")
 var wrapper = document.querySelector("#wrapper");
 
-var secondsLeft = 76;
+var secondsLeft = 60;
 var holdInterval = 0;
 var penalty = 10;
 var ulCreate = document.createElement("ul");
@@ -55,7 +55,7 @@ timer.addEventListener("click", function() {
                 currentTime.textContent = "Out of Time";
             
             }
-        },  1000);
+        },  900);
 
     }
     render(questionIndex)
