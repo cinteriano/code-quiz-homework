@@ -105,7 +105,7 @@ function compare(event) {
         
         if(questionIndex >= questions.length){
             allDone();
-            createDiv.textContent = "Done" + " " + "you got" + score + "/" + questions.length + "right";
+            createDiv.textContent = "Done " + " " + "you got " + score + "/ " + questions.length + " right ";
 
         } else {
             render(questionIndex);
@@ -141,7 +141,7 @@ function allDone() {
         var timeRemaining = secondsLeft;
         var createP2 = document.createElement("p");
         clearInterval(holdInterval);
-        createP.textContent = "your final score is" + timeRemaining;
+        createP.textContent = "Your final score is: " + timeRemaining;
         
         questionsDiv.appendChild(createP2);
 
@@ -151,7 +151,7 @@ function allDone() {
 
     var createLabel = document.createElement("label");
     createLabel.setAttribute("id" , "createLabel");
-    createLabel.textContent = "enter your initials:"
+    createLabel.textContent = "Enter your initials:"
 
     questionsDiv.appendChild(createLabel);
 

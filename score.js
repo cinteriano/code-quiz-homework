@@ -1,8 +1,8 @@
-var highScore = document.querySelector("#highScore");
+var highScore = document.querySelector("#highScores");
 var clear = document.querySelector("#clear");
 var goBack = document.querySelector("#goBack");
 
-clear.addEventListener("click" , function() {
+clear.addEventListener("click", function () {
     localStorage.clear();
     location.reload();
 });
@@ -16,10 +16,10 @@ if (allScores !== null) {
         var createLi = document.createElement("li");
         createLi.textContent = allScores[i].initials + " " + allScores[i].score;
         highScore.appendChild(createLi);
-    }
+    };
 
 }
 
-goBack.addEventListener("click", function(){
+goBack.addEventListener("click", function () {
     window.location.replace("./index.html");
 })
