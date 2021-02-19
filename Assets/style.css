@@ -15,9 +15,7 @@
     color: tomato;
  }
  
- 
- 
- #questions{
+    #questions{
      margin: 20px;
     
  }
@@ -26,52 +24,81 @@
      float: right;
     
  }
- #wrapper{
+ 
+ #goBack{
+     background-color: yellow;
+     position: relative;
+     padding : 10px;
+     font-size: 20px;
+     color: violet;
+     top: 30%;
+     left: 55%;
+     width: auto;
+     text-align: center;
+ }
+ 
+ #clear{
+     background-color: violet;
+     position: relative;
+     padding: 10px;
+     font-size: 20px;
+     color: yellow;
+     top: 30%;
+     right: 5%;
+     text-align: center;
+
+ }
+ 
+ button{
+     border-radius: 8px;
     
  }
- #wrapper{
+ 
+ textarea{
+     width: 90%;
+     margin: 20px;
     
  }
- #wrapper{
+ 
+ #Sumbit{
+     background-color: red;
+     margin-left: 33%;
+     padding: 15px 32px;
+     font-size: 20px;
+     color: royalblue;
     
  }
- #wrapper{
-    
+ 
+ label{
+    margin-right: 10px;
+    margin-bottom: 20px;
+
  }
- #wrapper{
-    
- }
- #wrapper{
-    
+
+ input{
+
+    margin-bottom: 20px;
+    width: 50%;
  }
          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 h1 {
  text-align: center;
  color: black;
 
 }
 
+li{
+background-color:#ef21e0 ;
+margin-top: 10px;
+padding: 5px 15px;
+width: 80%;
+font-size: 18px;
+color: black;
+
+}
+
+#createDiv{
+    margin-top: 20px;
+}
 
 
