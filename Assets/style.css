@@ -1,18 +1,33 @@
 #wrapper{
    position: absolute;
+   left: 30%;
+   top: 20%;
+   height: 500px;
+   width: 500px;
+   border: 2px black;
 }
 
-#wrapper{
+#startTime{
+    background-color: teal;
+    margin-left: 33%;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: tomato;
+ }
+ 
+ 
+ 
+ #questions{
+     margin: 20px;
+    
+ }
+ 
+ #currentTime{
+     float: right;
     
  }
  #wrapper{
     
- }
- #wrapper{
-    
- }
- #wrapper{
-    p
  }
  #wrapper{
     
